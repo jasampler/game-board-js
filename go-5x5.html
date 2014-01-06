@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Go</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="game-board-1.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	game_board({
+		container_id: 'go_game_board',
+		img_directory: 'go-5x5',
+		board_img: 'board.png',
+		offset_x: 27, offset_y: 27,
+		multiplier_x: 50, multiplier_y: 50,
+		pieces: {
+			'black': {
+				img: 'black.png',
+				selected_img: 'black_selected.png',
+				center_x: 20, center_y: 20
+			},
+			'white': {
+				img: 'white.png',
+				selected_img: 'white_selected.png',
+				center_x: 20, center_y: 20
+			},
+			'blank': {
+				img: 'blank.png',
+				center_x: 16, center_y: 16
+			}
+		},
+		positions: {
+			'0,0': {pieces: ['blank']},
+			'0,1': {pieces: ['blank']},
+			'0,2': {pieces: ['blank']},
+			'0,3': {pieces: ['blank']},
+			'0,4': {pieces: ['blank']},
+
+			'1,0': {pieces: ['blank']},
+			'1,1': {pieces: ['blank']},
+			'1,2': {pieces: ['blank']},
+			'1,3': {pieces: ['blank']},
+			'1,4': {pieces: ['blank']},
+
+			'2,0': {pieces: ['blank']},
+			'2,1': {pieces: ['blank']},
+			'2,2': {pieces: ['blank']},
+			'2,3': {pieces: ['blank']},
+			'2,4': {pieces: ['blank']},
+
+			'3,0': {pieces: ['blank']},
+			'3,1': {pieces: ['blank']},
+			'3,2': {pieces: ['blank']},
+			'3,3': {pieces: ['blank']},
+			'3,4': {pieces: ['blank']},
+
+			'4,0': {pieces: ['blank']},
+			'4,1': {pieces: ['blank']},
+			'4,2': {pieces: ['blank']},
+			'4,3': {pieces: ['blank']},
+			'4,4': {pieces: ['blank']},
+
+			'6,0': {is_box: true, pieces: ['blank']},
+			'6,4': {is_box: true, pieces: ['blank']},
+			'1,6': {is_box: true, pieces: ['blank',
+				'black', 'black', 'black', 'black', 'black',
+				'black', 'black', 'black', 'black', 'black',
+				'black', 'black', 'black', 'black', 'black',
+				'black', 'black', 'black', 'black', 'black',
+				'black', 'black', 'black', 'black', 'black',
+				'black', 'black', 'black', 'black', 'black'
+			]},
+			'2,6': {is_box: true, pieces: ['blank',
+				'white', 'white', 'white', 'white', 'white',
+				'white', 'white', 'white', 'white', 'white',
+				'white', 'white', 'white', 'white', 'white',
+				'white', 'white', 'white', 'white', 'white',
+				'white', 'white', 'white', 'white', 'white',
+				'white', 'white', 'white', 'white', 'white'
+			]}
+		}
+	});
+});
+</script>
+</head>
+
+<body style="background-color: #733;">
+	<div id="go_game_board" style="width: 400px; margin: 1em auto 0 auto;">
+	</div>
+</body>
+</html>
