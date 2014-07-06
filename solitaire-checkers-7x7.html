@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Solitaire Checkers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="game-board-1.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	game_board({
+		container_id: 'sol_checkers_game_board',
+		img_directory: 'solitaire-checkers-7x7',
+		board_img: 'board.png',
+		offset_x: 73, offset_y: 73,
+		multiplier_x: 50, multiplier_y: 51,
+		pieces: {
+			'pawn': {
+				img: 'pawn.png',
+				selected_img: 'pawn_selected.png',
+				center_x: 20, center_y: 20
+			},
+			'blank': {
+				img: 'blank.png',
+				center_x: 16, center_y: 16
+			}
+		},
+		positions: {
+			'0,2': {pieces: ['blank', 'pawn']},
+			'0,3': {pieces: ['blank', 'pawn']},
+			'0,4': {pieces: ['blank', 'pawn']},
+
+			'1,2': {pieces: ['blank', 'pawn']},
+			'1,3': {pieces: ['blank', 'pawn']},
+			'1,4': {pieces: ['blank', 'pawn']},
+
+			'2,0': {pieces: ['blank', 'pawn']},
+			'2,1': {pieces: ['blank', 'pawn']},
+			'2,2': {pieces: ['blank', 'pawn']},
+			'2,3': {pieces: ['blank', 'pawn']},
+			'2,4': {pieces: ['blank', 'pawn']},
+			'2,5': {pieces: ['blank', 'pawn']},
+			'2,6': {pieces: ['blank', 'pawn']},
+
+			'3,0': {pieces: ['blank', 'pawn']},
+			'3,1': {pieces: ['blank', 'pawn']},
+			'3,2': {pieces: ['blank', 'pawn']},
+			'3,3': {pieces: ['blank']},
+			'3,4': {pieces: ['blank', 'pawn']},
+			'3,5': {pieces: ['blank', 'pawn']},
+			'3,6': {pieces: ['blank', 'pawn']},
+
+			'4,0': {pieces: ['blank', 'pawn']},
+			'4,1': {pieces: ['blank', 'pawn']},
+			'4,2': {pieces: ['blank', 'pawn']},
+			'4,3': {pieces: ['blank', 'pawn']},
+			'4,4': {pieces: ['blank', 'pawn']},
+			'4,5': {pieces: ['blank', 'pawn']},
+			'4,6': {pieces: ['blank', 'pawn']},
+
+			'5,2': {pieces: ['blank', 'pawn']},
+			'5,3': {pieces: ['blank', 'pawn']},
+			'5,4': {pieces: ['blank', 'pawn']},
+
+			'6,2': {pieces: ['blank', 'pawn']},
+			'6,3': {pieces: ['blank', 'pawn']},
+			'6,4': {pieces: ['blank', 'pawn']},
+
+			'0,6': {is_box: true, pieces: ['blank']},
+		}
+	});
+});
+</script>
+</head>
+
+<body style="background-color: #8bd;">
+	<div id="sol_checkers_game_board" style="width: 450px; margin: 1em auto 0 auto;">
+	</div>
+</body>
+</html>
